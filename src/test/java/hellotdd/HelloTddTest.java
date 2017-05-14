@@ -10,8 +10,8 @@ public class HelloTddTest {
 
     @Test
     public void mustSayHelloTdd() {
-        Assert.assertTrue(sut.say().equals("Hello Tdd"));
         Assert.assertEquals(sut.say(), "Hello Tdd");
+        Assert.assertTrue(sut.say().equals("Hello Tdd"));
     }
 
     @Test
