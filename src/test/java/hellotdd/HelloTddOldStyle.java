@@ -7,7 +7,7 @@ public class HelloTddOldStyle {
 
     public static void main(String[] args) {
         String message = "Hello Tdd";
-        //test(message.equals("Wrong Hello Tdd"));
+        test(message.equals("Wrong Hello Tdd"));
         test(message.equals("Hello Tdd"));
     }
 }
