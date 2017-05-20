@@ -1,4 +1,4 @@
-package hellotdd;
+package tdd.hellotdd;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package hellotdd;
+package tdd.hellotdd;
 
 public class HelloTddOldStyle {
     public static void test(Boolean condition) {

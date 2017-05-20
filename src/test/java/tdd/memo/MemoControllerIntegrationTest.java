@@ -2,7 +2,7 @@ package tdd.memo;
 
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
-import tdd.AbstractIntegrationTest;
+import tdd.AbstractWebIntegrationTest;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,7 @@ import java.util.Map;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 
-public class MemoControllerIntegrationTest extends AbstractIntegrationTest {
+public class MemoControllerIntegrationTest extends AbstractWebIntegrationTest {
     @Test
     public void 작성한_모든_메모를_조회할수_있다() {
         Map<String, String> parameters = new HashMap<>();

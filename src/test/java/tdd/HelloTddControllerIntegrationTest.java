@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-public class HelloTddControllerIntegrationTest extends AbstractIntegrationTest {
+public class HelloTddControllerIntegrationTest extends AbstractWebIntegrationTest {
     @Test
     public void getHello() throws Exception {
         ResponseEntity<String> response = get("/", String.class);

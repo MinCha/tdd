@@ -1,4 +1,4 @@
-package hellotdd;
+package tdd.hellotdd;
 
 public class HelloTdd {
     public String say() {
