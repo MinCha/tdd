@@ -15,10 +15,10 @@ public class MemoControllerIntegrationTest extends AbstractWebIntegrationTest {
     public void 작성한_모든_메모를_조회할수_있다() {
         Map<String, String> parameters = new HashMap<>();
         parameters.put("memo", "Good TDD");
-        ensureOK(post("/memos", parameters, String.class));
+        post("/memos", parameters, String.class);
 
-        ResponseEntity<Note> result = ensureOK(get("/memos", Note.class));
+        Note result = getObject("/memos", Note.class);
 
-        assertThat(result.getBody().getMemos(), hasItem("Good TDD"));
+        assertThat(result.getMemos(), hasItem("Good TDD"));
     }
 }

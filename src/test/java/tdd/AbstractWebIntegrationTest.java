@@ -47,13 +47,17 @@ public abstract class AbstractWebIntegrationTest {
         String url = base.toString() + uri;
         ResponseEntity<T> result = template.getForEntity(url, responseType);
         log.info("GET " + url + " -> " + result.getStatusCode() + " " +  result.getBody());
-        return result;
+        return ensureOK(result);
+    }
+
+    protected <T> T getObject(String uri, Class<T> responseType) {
+        return get(uri, responseType).getBody();
     }
 
     protected <T> ResponseEntity<T> post(String uri, Map<String, String> parameters, Class<T> responseType) {
         MultiValueMap<String, String> postParameters = new LinkedMultiValueMap<String, String>();
         postParameters.setAll(parameters);
         ResponseEntity<T> result = template.postForEntity(base.toString() + uri, postParameters, responseType);
-        return result;
+        return ensureOK(result);
     }
 }
