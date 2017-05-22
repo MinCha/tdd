@@ -1,9 +1,11 @@
 package tdd.memo;
 
+import tdd.BaseObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Note {
+public class Note extends BaseObject {
     private List<String> memos = new ArrayList<>();
 
     public void add(String memo) {
