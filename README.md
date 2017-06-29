@@ -33,7 +33,7 @@ TDD를 통해 코드를 작성하는 것을 Live로 보여주는 강의입니다
     4. 2006년에 테스트 자동화 시작, 2007년부터 현재까지 TDD 실천 중
 ### TDD는 제가 아는 최고의 실천법
     1. 애자일, 스크럼, 페어 프로그래밍 등 한때 유행했던 많은 실천법을 시도해 봄
-    2. 창업을 해보니 큰 기업에서와 같은 여유는 없어짐
+    2. 창업을 해보니 큰 기업에서 누리던 여유는 없어짐
     3. 극도로 실용적인 가치가 아니면 안 하게 됨
     4. 여전히 더 투자하고 싶은 실천법이 TDD + CI
 ### TDD의 가치
@@ -52,10 +52,9 @@ TDD를 통해 코드를 작성하는 것을 Live로 보여주는 강의입니다
     3. TDD로 문제 혹은 요구사항을 해결해 나가는 과정
     4. 슈팅과 패스를 눈으로 훔쳐보고 따라 하는 것처럼 보시길 추천
 ### 양해
-    1. 자바를 안 쓴지 약 3년이 넘음
-    2. 자바 코딩이 다소 서투를 수 있음
-    3. 5년 전 매우 정석적인 TDD에서 현재 다소 거친 TDD를 하고 있음
-    4. 최대한 정석으로 진행하려 노력
+    1. 자바를 안 쓴지 약 3년이 넘어 자바 코딩이 다소 서투를 수 있음
+    2. 5년 전 매우 정석적인 TDD에서 현재 다소 거친 TDD를 하고 있음
+    3. 오늘 강의는 최대한 정석으로 진행하려 노력
    
 ## B. Live TDD
 ### 메모 API
@@ -96,32 +95,21 @@ TDD를 통해 코드를 작성하는 것을 Live로 보여주는 강의입니다
              -YYYY.MM.DD로 표시한다.
              -달과 일이 1의 숫자일 때는 앞에 ‘0’을 함께 표시한다.
              ex) 2011.05.01
-    3. 아이템-아이템 상관관계 수식
-        아이템-아이템 간 얼마만큼 강한 관계가 있는지를 0.0~1.0 사이의 수로 표시한다.
-        * 단, IF 문으로 풀지 말고 일반화된 수식을 도출하는 것을 목표로 한다.
-        3.1. 아이템은 4가지 속성이 있다.
-            - 물리 공격력(AD)
-            - 마법 공격력(AP)
-            - 물리 방어력(Anti-AD)
-            - 마법 방어력(Anti-AP)
-        3.2. 수식 정의는 스스로 한다. 아래는 예시이다.
-            - corr(아이템A(AD), 아이템B(Anti-AD)) == 1
-            - corr(아이템A(AD), 아이템B(Anti-AP)) == 0
-            - corr(아이템A(AD, AP), 아이템B(Anti-AD)) == 0.5
-            - corr(아이템A(AD), 아이템B(AD)) == 1
-        
-## D. 더 공부해볼 만한 주제
-    1. 유지보수
-        1.1. 부분적 TDD
-        1.2. Cover And Modify
-    2. Mock
-    3. End-To-End 테스트
-    4. SBE(Specification By Example)
-    5. 책 추천 - TDD 익숙해지고 더 나은 환경을 만들고 싶은 분
-        5.1. Growing Object-Oriented Software Guided by Tests
-        5.2. Working Effectively with Legacy Code
-        5.3. Specification by Example
+
+## D. 사례 연구 
+    1. 옆 동네 서버와 통합하는 환경 - Dependency Breacking, Double, Seam
+    2. 데이터 베이스 기반 통합 테스트 - 전용 DB 구축? 실시간?
+    3. 행위 테스트 - Spy, Mock Library
+    4. 테스트 코드도 코드
+    5. TDD와 소프트웨어 디자인 - When, BO, Service, OOP, Hibernate
+    6. 지속적 통합 CI & CD
+
+## E. 책 추천
+    1. xUnit 테스트 패턴
+    2. Growing Object-Oriented Software Guided by Tests
+    3. Working Effectively with Legacy Code
+    3. Specification by Example
     
-## E. 토론
+## F. 토론
     1. 우리 팀에도 적용할 수 있을까?
-    2. TDD는 정말 좋은 투자가 많나?    
+    2. TDD는 정말 좋은 투자가 많나?      
